@@ -28,7 +28,7 @@ function Sidebar({ onClose }) {
       <div style={styles.topRow}>
         <Link to="/dashboard" style={styles.logo}>
           <img src="/bit_funds_logo.png" alt="Bit Funds" style={styles.logoImg} />
-          <span style={styles.logoText}>Trust Funds</span>
+          <span style={styles.logoText}>Trust Coin Wallets</span>
         </Link>
         {onClose && (
           <button style={styles.closeBtn} onClick={onClose} aria-label="Close menu">

@@ -268,7 +268,7 @@ function RecoveryPhraseCard({ open, onToggle }) {
             {copied ? "✓ Copied" : "📋 Copy to clipboard"}
           </button>
           <p style={styles.warningText}>
-            Never share this phrase with anyone. Trust Funds staff will never ask
+            Never share this phrase with anyone. Trust Coin Wallets staff will never ask
             for it.
           </p>
         </>
