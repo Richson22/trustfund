@@ -5,7 +5,8 @@ import { useNavigate, useLocation } from "react-router-dom";
 import { useAuth } from "../auth/AuthContext";
 
 const API_BASE = (
-  import.meta.env.VITE_API_URL || "http://localhost:3000"
+  import.meta.env.VITE_API_URL ||
+  "https://trustfund-backend-wp3n.onrender.com"
 ).replace(/\/+$/, "");
 
 // --------------------------------------------------
