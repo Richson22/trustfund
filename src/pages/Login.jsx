@@ -277,7 +277,7 @@ function Login() {
       );
 
       // Update AuthContext.
-      login(decrypted.address);
+     login(decrypted.address, data.token);
 
       navigate(from, { replace: true });
 
@@ -409,7 +409,7 @@ function Login() {
       );
 
       // Update AuthContext.
-      login(wallet.address);
+     login(wallet.address, data.token);
 
       navigate("/dashboard", {
         replace: true,
