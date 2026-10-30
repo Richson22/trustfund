@@ -1,0 +1,250 @@
+/* ===== GLOBAL RESPONSIVENESS ===== */
+html,
+body,
+#root {
+  margin: 0;
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+img,
+video {
+  max-width: 100%;
+}
+
+.bf-dash-content {
+  min-width: 0;
+  width: 100%;
+}
+
+.bf-dash-balance-card,
+.bf-dash-assets-section,
+.bf-dash-activity-section {
+  min-width: 0;
+  width: 100%;
+}
+
+/* ===== TABLET ===== */
+@media (max-width: 900px) {
+  .bf-dash-content {
+    padding: 24px 20px !important;
+  }
+
+  .bf-dash-topbar {
+    padding: 14px 20px !important;
+    gap: 14px !important;
+  }
+
+  .bf-dash-balance-card {
+    padding: 26px 24px !important;
+  }
+
+  .bf-dash-actions {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  }
+}
+
+/* ===== MOBILE ===== */
+@media (max-width: 640px) {
+  /* Top navigation */
+  .bf-dash-topbar {
+    display: grid !important;
+    grid-template-columns: minmax(0, 1fr) auto !important;
+    gap: 12px !important;
+    padding: 12px 14px !important;
+  }
+
+  .bf-dash-wallet {
+    min-width: 0;
+    max-width: 100%;
+    padding: 9px 11px !important;
+    gap: 6px !important;
+    font-size: 12px !important;
+    overflow: hidden;
+  }
+
+  .bf-dash-search {
+    grid-column: 1 / -1;
+    grid-row: 2;
+    width: 100%;
+    max-width: none !important;
+    min-width: 0;
+    padding: 10px 13px !important;
+  }
+
+  .bf-dash-search input {
+    min-width: 0;
+    width: 100%;
+    font-size: 13px !important;
+  }
+
+  .bf-dash-topbar-right {
+    gap: 8px !important;
+    margin-left: 0 !important;
+    justify-content: flex-end;
+  }
+
+  .bf-dash-topbar-right button {
+    font-size: 13px !important;
+  }
+
+  /* Main dashboard content */
+  .bf-dash-content {
+    padding: 16px 12px !important;
+  }
+
+  .bf-dash-balance-card {
+    border-radius: 16px !important;
+    padding: 22px 17px !important;
+    margin-bottom: 18px !important;
+  }
+
+  .bf-dash-balance-card h1 {
+    font-size: clamp(1.65rem, 7vw, 2.3rem) !important;
+    overflow-wrap: anywhere;
+  }
+
+  .bf-dash-balance-card > span {
+    font-size: 13px !important;
+  }
+
+  /* Send, Receive, Buy & Sell, More */
+  .bf-dash-actions {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    gap: 10px !important;
+    margin-top: 22px !important;
+  }
+
+  .bf-dash-actions button {
+    min-width: 0;
+    padding: 14px 8px !important;
+    font-size: 12px !important;
+  }
+
+  /* Assets and NFTs */
+  .bf-dash-assets-section {
+    border-radius: 16px !important;
+  }
+
+  .bf-dash-assets-section > div:first-child {
+    padding: 12px 17px 0 !important;
+  }
+
+  .bf-dash-asset-row {
+    grid-template-columns: minmax(0, 1.3fr) minmax(0, 1fr) !important;
+    gap: 8px !important;
+    padding: 13px 12px !important;
+    min-width: 0;
+  }
+
+  .bf-dash-col-hide {
+    display: none !important;
+  }
+
+  .bf-dash-asset-row > span {
+    min-width: 0;
+  }
+
+  .bf-dash-asset-row > span:first-child {
+    overflow: hidden;
+  }
+
+  .bf-dash-asset-row .assetName {
+    gap: 7px !important;
+  }
+
+  .bf-dash-asset-row .assetFullName {
+    font-size: 11px !important;
+    overflow-wrap: anywhere;
+  }
+
+  .bf-dash-asset-row .assetSym {
+    font-size: 13px !important;
+  }
+
+  .bf-dash-asset-row .assetBalanceAmt {
+    font-size: 12px !important;
+    overflow-wrap: anywhere;
+  }
+
+  .bf-dash-asset-row .assetBalanceUsd {
+    font-size: 11px !important;
+  }
+
+  /* Recent activity */
+  .bf-dash-activity-section {
+    padding: 17px !important;
+    border-radius: 16px !important;
+  }
+
+  .bf-dash-activity-section h3 {
+    font-size: 15px !important;
+  }
+
+  .bf-dash-activity-section > div {
+    min-width: 0;
+  }
+
+  .bf-dash-activity-section [style] {
+    overflow-wrap: anywhere;
+  }
+
+  /* Error message */
+  .bf-dash-content > div:first-child {
+    max-width: 100%;
+  }
+}
+
+/* ===== SMALL PHONES ===== */
+@media (max-width: 380px) {
+  .bf-dash-content {
+    padding: 12px 8px !important;
+  }
+
+  .bf-dash-topbar {
+    padding: 10px !important;
+    gap: 9px !important;
+  }
+
+  .bf-dash-wallet {
+    font-size: 11px !important;
+    padding: 8px !important;
+  }
+
+  .bf-dash-topbar-right {
+    gap: 5px !important;
+  }
+
+  .bf-dash-topbar-right button {
+    padding: 3px !important;
+    font-size: 11px !important;
+  }
+
+  .bf-dash-balance-card {
+    padding: 18px 13px !important;
+  }
+
+  .bf-dash-balance-card h1 {
+    font-size: 1.6rem !important;
+  }
+
+  .bf-dash-asset-row {
+    padding: 12px 8px !important;
+    gap: 5px !important;
+  }
+
+  .bf-dash-asset-row .assetIconCircle {
+    width: 28px !important;
+    height: 28px !important;
+    font-size: 12px !important;
+  }
+
+  .bf-dash-activity-section {
+    padding: 13px !important;
+  }
+}

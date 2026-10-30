@@ -1,0 +1,867 @@
+/* ================================
+   GLOBAL RESPONSIVENESS
+================================ */
+html {
+  scroll-behavior: smooth;
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+body,
+#root {
+  width: 100%;
+  max-width: 100%;
+  margin: 0;
+  overflow-x: hidden;
+}
+
+img,
+video,
+svg {
+  max-width: 100%;
+}
+
+button,
+a,
+input {
+  max-width: 100%;
+}
+
+h1,
+h2,
+h3,
+h4,
+p {
+  overflow-wrap: break-word;
+}
+
+.bf-hero-inner,
+.bf-announce-card,
+.bf-dev-banner-card,
+.bf-simple-card,
+.bf-privacy-card,
+.bf-onestop-card {
+  min-width: 0;
+}
+
+.bf-hero-left,
+.bf-hero-right,
+.bf-announce-left,
+.bf-dev-banner-left,
+.bf-simple-card-left,
+.bf-privacy-card-left,
+.bf-onestop-left,
+.bf-onestop-right {
+  min-width: 0;
+}
+
+/* ================================
+   TABLETS AND SMALL LAPTOPS
+================================ */
+@media (max-width: 1024px) {
+  /* Navigation */
+  nav > div {
+    padding: 14px 20px !important;
+    gap: 16px !important;
+  }
+
+  nav > div > div:nth-child(2) {
+    gap: 16px !important;
+  }
+
+  nav > div > div:nth-child(3) {
+    gap: 8px !important;
+  }
+
+  /* Hero */
+  header {
+    padding: 65px 24px 0 !important;
+  }
+
+  .bf-hero-inner {
+    gap: 28px !important;
+  }
+
+  /* Main sections */
+  .bf-announce-card,
+  .bf-dev-banner-card,
+  .bf-simple-card,
+  .bf-privacy-card {
+    padding: 36px 28px !important;
+    gap: 24px !important;
+  }
+
+  /* Chain table */
+  .bf-market-row {
+    padding: 14px 16px !important;
+  }
+
+  /* Footer */
+  footer > div:first-child {
+    grid-template-columns: 1fr !important;
+    gap: 32px !important;
+  }
+
+  .bf-footer-columns {
+    grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+    gap: 24px !important;
+  }
+}
+
+/* ================================
+   MOBILE DEVICES
+================================ */
+@media (max-width: 768px) {
+  /* Navigation */
+  nav > div {
+    flex-wrap: wrap !important;
+    padding: 12px 16px !important;
+    gap: 12px !important;
+  }
+
+  nav > div > div:first-child {
+    flex: 1 1 auto;
+  }
+
+  nav > div > div:nth-child(2) {
+    order: 3;
+    flex: 1 1 100%;
+    display: flex !important;
+    flex-wrap: nowrap !important;
+    justify-content: flex-start !important;
+    gap: 20px !important;
+    overflow-x: auto;
+    overflow-y: hidden;
+    padding: 8px 0;
+    scrollbar-width: thin;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  nav > div > div:nth-child(2) > div {
+    flex: 0 0 auto;
+  }
+
+  nav > div > div:nth-child(3) {
+    flex: 0 0 auto;
+    margin-left: auto;
+  }
+
+  nav > div > div:nth-child(3) button {
+    padding: 8px 12px !important;
+    font-size: 12px !important;
+  }
+
+  /* Dropdown menus */
+  nav > div > div:nth-child(2) > div > div {
+    max-width: calc(100vw - 24px) !important;
+  }
+
+  /* Hero */
+  header {
+    padding: 48px 20px 0 !important;
+  }
+
+  .bf-hero-inner {
+    grid-template-columns: minmax(0, 1fr) !important;
+    gap: 30px !important;
+    margin-bottom: 36px !important;
+  }
+
+  .bf-hero-left {
+    text-align: center !important;
+  }
+
+  .bf-hero-left h1 {
+    font-size: clamp(2rem, 7vw, 3rem) !important;
+    line-height: 1.15 !important;
+  }
+
+  .bf-hero-left p {
+    margin-left: auto !important;
+    margin-right: auto !important;
+    font-size: 15px !important;
+  }
+
+  .bf-hero-buttons {
+    justify-content: center !important;
+    gap: 10px !important;
+  }
+
+  .bf-hero-buttons a,
+  .bf-hero-buttons button {
+    padding: 13px 18px !important;
+    font-size: 14px !important;
+  }
+
+  .bf-hero-inner img {
+    width: 100% !important;
+    max-width: 420px !important;
+    height: auto !important;
+  }
+
+  /* Market ticker */
+  header + div {
+    padding: 0 !important;
+  }
+
+  header + div > div {
+    justify-content: flex-start !important;
+    flex-wrap: nowrap !important;
+    overflow-x: auto;
+    gap: 24px !important;
+    padding: 16px 20px !important;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  /* Trust bar */
+  header + div + div {
+    padding: 24px 16px !important;
+  }
+
+  /* Main sections */
+  section {
+    padding-left: 18px !important;
+    padding-right: 18px !important;
+  }
+
+  .bf-announce-card,
+  .bf-dev-banner-card,
+  .bf-simple-card,
+  .bf-privacy-card,
+  .bf-onestop-card {
+    grid-template-columns: minmax(0, 1fr) !important;
+    text-align: center !important;
+    border-radius: 18px !important;
+    gap: 24px !important;
+  }
+
+  .bf-announce-card,
+  .bf-dev-banner-card {
+    padding: 30px 20px !important;
+  }
+
+  .bf-simple-card,
+  .bf-privacy-card {
+    padding: 30px 20px !important;
+  }
+
+  .bf-announce-left,
+  .bf-dev-banner-left,
+  .bf-simple-card-left,
+  .bf-privacy-card-left {
+    align-items: center;
+    text-align: center !important;
+    padding-bottom: 0 !important;
+  }
+
+  .bf-announce-right,
+  .bf-dev-banner-right,
+  .bf-simple-card-right,
+  .bf-privacy-card-right {
+    justify-content: center !important;
+    width: 100%;
+  }
+
+  .bf-simple-card img,
+  .bf-dev-banner-card img,
+  .bf-privacy-card img {
+    max-width: 100% !important;
+    height: auto !important;
+  }
+
+  .bf-privacy-grid {
+    grid-template-columns: minmax(0, 1fr) !important;
+    gap: 16px !important;
+  }
+
+  .bf-onestop-card {
+    display: grid !important;
+  }
+
+  .bf-onestop-left {
+    padding: 32px 22px !important;
+    align-items: center !important;
+    text-align: center !important;
+  }
+
+  .bf-onestop-right {
+    min-height: 260px !important;
+    padding: 20px !important;
+    width: 100%;
+  }
+
+  .bf-onestop-right video {
+    width: 100% !important;
+    max-width: 100% !important;
+    max-height: 300px !important;
+  }
+
+  .bf-onestop-tabs,
+  .bf-onestop-left > a {
+    max-width: 100%;
+  }
+
+  /* Chain comparison table */
+  section:has(.bf-market-row) > div {
+    padding: 28px 16px 0 !important;
+    border-radius: 18px !important;
+  }
+
+  section:has(.bf-market-row) > div > div:last-child {
+    overflow-x: auto !important;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .bf-market-row {
+    min-width: 560px !important;
+    grid-template-columns: minmax(170px, 2fr) repeat(5, minmax(50px, 1fr)) !important;
+    padding: 14px 12px !important;
+  }
+
+  /* Ratings */
+  .bf-ratings-title {
+    font-size: 1.8rem !important;
+  }
+
+  /* Footer */
+  footer {
+    padding: 42px 20px 0 !important;
+  }
+
+  footer > div:first-child {
+    grid-template-columns: minmax(0, 1fr) !important;
+    gap: 28px !important;
+  }
+
+  .bf-footer-columns {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    gap: 24px 16px !important;
+  }
+
+  footer > div:last-child {
+    margin-top: 32px !important;
+  }
+
+  footer p {
+    line-height: 1.7 !important;
+  }
+}
+
+/* ================================
+   SMALL PHONES
+================================ */
+@media (max-width: 480px) {
+  nav > div {
+    padding: 10px 12px !important;
+  }
+
+  nav > div > div:first-child img {
+    width: 30px !important;
+    height: 30px !important;
+  }
+
+  nav > div > div:first-child span {
+    font-size: 15px !important;
+  }
+
+  nav > div > div:nth-child(3) button {
+    padding: 7px 9px !important;
+    font-size: 11px !important;
+  }
+
+  header {
+    padding: 36px 16px 0 !important;
+  }
+
+  .bf-hero-left h1 {
+    font-size: 1.9rem !important;
+  }
+
+  .bf-hero-buttons a,
+  .bf-hero-buttons button {
+    width: 100%;
+    max-width: 280px;
+  }
+
+  .bf-announce-card,
+  .bf-dev-banner-card,
+  .bf-simple-card,
+  .bf-privacy-card {
+    padding: 25px 16px !important;
+  }
+
+  .bf-announce-card h2 {
+    font-size: 2rem !important;
+  }
+
+  .bf-footer-columns {
+    grid-template-columns: minmax(0, 1fr) !important;
+    gap: 24px !important;
+  }
+
+  .bf-footer-columns > div {
+    gap: 10px !important;
+  }
+
+  footer > div:first-child > div:last-child {
+    flex-wrap: wrap !important;
+  }
+}
+
+/* ================================
+   GLOBAL RESPONSIVENESS
+================================ */
+html {
+  scroll-behavior: smooth;
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+body,
+#root {
+  width: 100%;
+  max-width: 100%;
+  margin: 0;
+  overflow-x: hidden;
+}
+
+img,
+video,
+svg {
+  max-width: 100%;
+}
+
+button,
+a,
+input {
+  max-width: 100%;
+}
+
+h1,
+h2,
+h3,
+h4,
+p {
+  overflow-wrap: break-word;
+}
+
+.bf-hero-inner,
+.bf-announce-card,
+.bf-dev-banner-card,
+.bf-simple-card,
+.bf-privacy-card,
+.bf-onestop-card {
+  min-width: 0;
+}
+
+.bf-hero-left,
+.bf-hero-right,
+.bf-announce-left,
+.bf-dev-banner-left,
+.bf-simple-card-left,
+.bf-privacy-card-left,
+.bf-onestop-left,
+.bf-onestop-right {
+  min-width: 0;
+}
+
+/* ================================
+   TABLETS AND SMALL LAPTOPS
+================================ */
+@media (max-width: 1024px) {
+  /* Navigation */
+  nav > div {
+    padding: 14px 20px !important;
+    gap: 16px !important;
+  }
+
+  nav > div > div:nth-child(2) {
+    gap: 16px !important;
+  }
+
+  nav > div > div:nth-child(3) {
+    gap: 8px !important;
+  }
+
+  /* Hero */
+  header {
+    padding: 65px 24px 0 !important;
+  }
+
+  .bf-hero-inner {
+    gap: 28px !important;
+  }
+
+  /* Main sections */
+  .bf-announce-card,
+  .bf-dev-banner-card,
+  .bf-simple-card,
+  .bf-privacy-card {
+    padding: 36px 28px !important;
+    gap: 24px !important;
+  }
+
+  /* Chain table */
+  .bf-market-row {
+    padding: 14px 16px !important;
+  }
+
+  /* Footer */
+  footer > div:first-child {
+    grid-template-columns: 1fr !important;
+    gap: 32px !important;
+  }
+
+  .bf-footer-columns {
+    grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+    gap: 24px !important;
+  }
+}
+
+/* ================================
+   MOBILE DEVICES
+================================ */
+@media (max-width: 768px) {
+  /* Navigation */
+  nav > div {
+    flex-wrap: wrap !important;
+    padding: 12px 16px !important;
+    gap: 12px !important;
+  }
+
+  nav > div > div:first-child {
+    flex: 1 1 auto;
+  }
+
+  nav > div > div:nth-child(2) {
+    order: 3;
+    flex: 1 1 100%;
+    display: flex !important;
+    flex-wrap: nowrap !important;
+    justify-content: flex-start !important;
+    gap: 20px !important;
+    overflow-x: auto;
+    overflow-y: hidden;
+    padding: 8px 0;
+    scrollbar-width: thin;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  nav > div > div:nth-child(2) > div {
+    flex: 0 0 auto;
+  }
+
+  nav > div > div:nth-child(3) {
+    flex: 0 0 auto;
+    margin-left: auto;
+  }
+
+  nav > div > div:nth-child(3) button {
+    padding: 8px 12px !important;
+    font-size: 12px !important;
+  }
+
+  /* Dropdown menus */
+  nav > div > div:nth-child(2) > div > div {
+    max-width: calc(100vw - 24px) !important;
+  }
+
+  /* Hero */
+  header {
+    padding: 48px 20px 0 !important;
+  }
+
+  .bf-hero-inner {
+    grid-template-columns: minmax(0, 1fr) !important;
+    gap: 30px !important;
+    margin-bottom: 36px !important;
+  }
+
+  .bf-hero-left {
+    text-align: center !important;
+  }
+
+  .bf-hero-left h1 {
+    font-size: clamp(2rem, 7vw, 3rem) !important;
+    line-height: 1.15 !important;
+  }
+
+  .bf-hero-left p {
+    margin-left: auto !important;
+    margin-right: auto !important;
+    font-size: 15px !important;
+  }
+
+  .bf-hero-buttons {
+    justify-content: center !important;
+    gap: 10px !important;
+  }
+
+  .bf-hero-buttons a,
+  .bf-hero-buttons button {
+    padding: 13px 18px !important;
+    font-size: 14px !important;
+  }
+
+  .bf-hero-inner img {
+    width: 100% !important;
+    max-width: 420px !important;
+    height: auto !important;
+  }
+
+  /* Market ticker */
+  header + div {
+    padding: 0 !important;
+  }
+
+  header + div > div {
+    justify-content: flex-start !important;
+    flex-wrap: nowrap !important;
+    overflow-x: auto;
+    gap: 24px !important;
+    padding: 16px 20px !important;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  /* Trust bar */
+  header + div + div {
+    padding: 24px 16px !important;
+  }
+
+  /* Main sections */
+  section {
+    padding-left: 18px !important;
+    padding-right: 18px !important;
+  }
+
+  .bf-announce-card,
+  .bf-dev-banner-card,
+  .bf-simple-card,
+  .bf-privacy-card,
+  .bf-onestop-card {
+    grid-template-columns: minmax(0, 1fr) !important;
+    text-align: center !important;
+    border-radius: 18px !important;
+    gap: 24px !important;
+  }
+
+  .bf-announce-card,
+  .bf-dev-banner-card {
+    padding: 30px 20px !important;
+  }
+
+  .bf-simple-card,
+  .bf-privacy-card {
+    padding: 30px 20px !important;
+  }
+
+  .bf-announce-left,
+  .bf-dev-banner-left,
+  .bf-simple-card-left,
+  .bf-privacy-card-left {
+    align-items: center;
+    text-align: center !important;
+    padding-bottom: 0 !important;
+  }
+
+  .bf-announce-right,
+  .bf-dev-banner-right,
+  .bf-simple-card-right,
+  .bf-privacy-card-right {
+    justify-content: center !important;
+    width: 100%;
+  }
+
+  .bf-simple-card img,
+  .bf-dev-banner-card img,
+  .bf-privacy-card img {
+    max-width: 100% !important;
+    height: auto !important;
+  }
+
+  .bf-privacy-grid {
+    grid-template-columns: minmax(0, 1fr) !important;
+    gap: 16px !important;
+  }
+
+  .bf-onestop-card {
+    display: grid !important;
+  }
+
+  .bf-onestop-left {
+    padding: 32px 22px !important;
+    align-items: center !important;
+    text-align: center !important;
+  }
+
+  .bf-onestop-right {
+    min-height: 260px !important;
+    padding: 20px !important;
+    width: 100%;
+  }
+
+  .bf-onestop-right video {
+    width: 100% !important;
+    max-width: 100% !important;
+    max-height: 300px !important;
+  }
+
+  .bf-onestop-tabs,
+  .bf-onestop-left > a {
+    max-width: 100%;
+  }
+
+  /* Chain comparison table */
+  section:has(.bf-market-row) > div {
+    padding: 28px 16px 0 !important;
+    border-radius: 18px !important;
+  }
+
+  section:has(.bf-market-row) > div > div:last-child {
+    overflow-x: auto !important;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .bf-market-row {
+    min-width: 560px !important;
+    grid-template-columns: minmax(170px, 2fr) repeat(5, minmax(50px, 1fr)) !important;
+    padding: 14px 12px !important;
+  }
+
+  /* Ratings */
+  .bf-ratings-title {
+    font-size: 1.8rem !important;
+  }
+
+  /* Footer */
+  footer {
+    padding: 42px 20px 0 !important;
+  }
+
+  footer > div:first-child {
+    grid-template-columns: minmax(0, 1fr) !important;
+    gap: 28px !important;
+  }
+
+  .bf-footer-columns {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    gap: 24px 16px !important;
+  }
+
+  footer > div:last-child {
+    margin-top: 32px !important;
+  }
+
+  footer p {
+    line-height: 1.7 !important;
+  }
+}
+
+/* ================================
+   SMALL PHONES
+================================ */
+@media (max-width: 480px) {
+  nav > div {
+    padding: 10px 12px !important;
+  }
+
+  nav > div > div:first-child img {
+    width: 30px !important;
+    height: 30px !important;
+  }
+
+  nav > div > div:first-child span {
+    font-size: 15px !important;
+  }
+
+  nav > div > div:nth-child(3) button {
+    padding: 7px 9px !important;
+    font-size: 11px !important;
+  }
+
+  header {
+    padding: 36px 16px 0 !important;
+  }
+
+  .bf-hero-left h1 {
+    font-size: 1.9rem !important;
+  }
+
+  .bf-hero-buttons a,
+  .bf-hero-buttons button {
+    width: 100%;
+    max-width: 280px;
+  }
+
+  .bf-announce-card,
+  .bf-dev-banner-card,
+  .bf-simple-card,
+  .bf-privacy-card {
+    padding: 25px 16px !important;
+  }
+
+  .bf-announce-card h2 {
+    font-size: 2rem !important;
+  }
+
+  .bf-footer-columns {
+    grid-template-columns: minmax(0, 1fr) !important;
+    gap: 24px !important;
+  }
+
+  .bf-footer-columns > div {
+    gap: 10px !important;
+  }
+
+  footer > div:first-child > div:last-child {
+    flex-wrap: wrap !important;
+  }
+}
+
+.bf-mobile-menu {
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  top: 68px;
+  right: 0;
+  bottom: 0;
+  width: min(85vw, 360px);
+  height: calc(100vh - 68px);
+  padding: 20px 24px 30px;
+  background: #ffffff;
+  border-left: 1px solid rgba(11, 14, 10, 0.08);
+  box-shadow: -12px 0 35px rgba(0, 0, 0, 0.12);
+  z-index: 1000;
+  overflow-y: auto;
+  animation: bfSlideInRight 0.3s ease-out both;
+}
+
+@keyframes bfSlideInRight {
+  from {
+    transform: translateX(100%);
+    opacity: 0.5;
+  }
+
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.bf-mobile-menu[hidden] {
+  display: none !important;
+}
+
+.bf-mobile-nav-link {
+  display: block;
+  padding: 16px 4px;
+  color: #0b0e0a;
+  text-decoration: none;
+  font-size: 15px;
+  font-weight: 650;
+  border-bottom: 1px solid rgba(11, 14, 10, 0.08);
+}
+
+.bf-mobile-nav-link:active {
+  color: #3D5CFF;
+}
