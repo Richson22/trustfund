@@ -15,7 +15,7 @@ import NftDetail from "./pages/NftDetail";
 import Earn from "./pages/Earn";
 import Discover from "./pages/Discover";
 import ImportWallet from "./pages/Importwallet";
-import BuySell from "./pages/Buysell";
+import BuySell from "./pages/BuySell";
 import AppLayout from "./components/AppLayout";
 import { AuthProvider, useAuth } from "./auth/AuthContext";
 import ProtectedRoute from "./auth/ProtectedRoute";
