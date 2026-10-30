@@ -508,7 +508,7 @@ function Login() {
             />
 
             <span style={styles.brandLogoText}>
-              Trust Funds
+              Trust Coin Wallets
             </span>
           </a>
 

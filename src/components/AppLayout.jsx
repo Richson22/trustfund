@@ -43,7 +43,7 @@ function AppLayout({ children }) {
           <span style={styles.hamburgerBar} />
           <span style={styles.hamburgerBar} />
         </button>
-        <span style={styles.mobileTitle}>Trust Funds</span>
+        <span style={styles.mobileTitle}>Trust Coin wallets</span>
       </div>
 
       {/* Dark overlay behind the drawer, closes it when tapped */}

@@ -210,7 +210,7 @@ function Home() {
         <div className="bf-nav-inner" style={styles.navInner}>
           <div style={styles.logo}>
             <img src="/bit_funds_logo.png" alt="Trust Funds" style={styles.logoImg} />
-            <span style={styles.logoText}>Trust Funds</span>
+            <span style={styles.logoText}>Trust Coin Wallets</span>
           </div>
           <button
             type="button"
@@ -494,7 +494,7 @@ function Home() {
               <span style={styles.titleAccent}>Powerful Web3 experiences</span>
             </h1>
             <p style={styles.subtitle}>
-              Trust Funds is a free self-custody crypto wallet supporting 100+ blockchains —
+              Trust coin wallets is a free self-custody crypto wallet supporting 100+ blockchains —
               buy, send, swap, stake, and earn crypto and NFTs while you alone control your
               private keys. Available on iOS, Android, and as a browser extension, with no
               account required.
@@ -505,7 +505,7 @@ function Home() {
             </div>
           </div>
           <div style={styles.heroRight}>
-            <img src="/phone-image.png" alt="Trust Funds app preview" style={styles.heroImg} />
+            <img src="/phone-image.png" alt="Trust Coin Wallets app preview" style={styles.heroImg} />
           </div>
         </div>
 
