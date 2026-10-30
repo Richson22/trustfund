@@ -9,6 +9,9 @@
     "lint": "oxlint",
     "preview": "vite preview"
   },
+  "engines": {
+  "node": ">=22.12.0"
+},
   "dependencies": {
     "@moonpay/moonpay-js": "^0.7.6",
     "ethers": "^6.17.0",
