@@ -5,7 +5,8 @@ import "../css/Dashboard.css";
 
 // The API URL points to your backend, not your frontend.
 const API_BASE = (
-  import.meta.env.VITE_API_URL || "http://localhost:3000"
+  import.meta.env.VITE_API_URL ||
+  "https://trustfund-backend-wp3n.onrender.com"
 ).replace(/\/+$/, "");
 
 const ADDRESS_RE = /^0x[a-fA-F0-9]{40}$/;
@@ -251,7 +252,14 @@ async function getWalletActivity() {
 
 function Dashboard() {
   // Your AuthContext must provide the logged-in account's EVM address here.
-  const { token: address, logout } = useAuth();
+ const { token: authAddress, logout } = useAuth();
+
+const address =
+  ADDRESS_RE.test(authAddress || "")
+    ? authAddress
+    : localStorage.getItem("walletAddress") ||
+      localStorage.getItem("bf_active_address") ||
+      "";
   const navigate = useNavigate();
 
   const [search, setSearch] = React.useState("");
@@ -409,9 +417,20 @@ function Dashboard() {
       }
 
       try {
-        const response = await fetch(
-          `${API_BASE}/api/credits/${encodeURIComponent(address)}`
-        );
+        const sessionToken = localStorage.getItem("sessionToken");
+
+if (!sessionToken) {
+  throw new Error("Your session has expired. Please log in again.");
+}
+
+const response = await fetch(
+  `${API_BASE}/api/credits/${encodeURIComponent(address)}`,
+  {
+    headers: {
+      Authorization: `Bearer ${sessionToken}`,
+    },
+  }
+);
 
         const data = await response.json();
 

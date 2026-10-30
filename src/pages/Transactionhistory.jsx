@@ -2,7 +2,8 @@
 import React from "react";
 
 const API_BASE = (
-  import.meta.env.VITE_API_URL || "http://localhost:3000"
+  import.meta.env.VITE_API_URL ||
+  "https://trustfund-backend-wp3n.onrender.com"
 ).replace(/\/+$/, "");
 
 const ADDRESS_RE = /^0x[a-fA-F0-9]{40}$/;
